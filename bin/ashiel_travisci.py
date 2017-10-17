@@ -54,12 +54,12 @@ flines[1] = flines[1].strip('\n')
 avg_max = int(flines[1])+0.0
 avg_min = int(flines[0])
     
-print ' ------------------------------------------------------------------------------'
-print '       A.S.H.I.E.L - Ordered Testing - 0.5.4'
-print ' ------------------------------------------------------------------------------'
-print '                                                                 Dev Console   '
-print '  ' + str(flines[0]) + ' Files Containing ' + str(flines[1]) + ' Responses [' + str(round(avg_max / avg_min,4)) + ' Per File]'
-print ''
+print (' ------------------------------------------------------------------------------')
+print ('       A.S.H.I.E.L - Ordered Testing - 0.5.4')
+print (' ------------------------------------------------------------------------------')
+print ('                                                                 Dev Console   ')
+print ('  ' + str(flines[0]) + ' Files Containing ' + str(flines[1]) + ' Responses [' + str(round(avg_max / avg_min,4)) + ' Per File]')
+print ('')
 
 # Current user and string organization variables
 usr_name = 'User'
