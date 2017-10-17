@@ -2,7 +2,7 @@ language: python
 python:
   - "3.6"
 
-script: bin/ashiel_travisci.py
+script: python bin/ashiel_travisci.py
 
 branches:
   only:
