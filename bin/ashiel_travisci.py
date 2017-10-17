@@ -214,4 +214,6 @@ while prg_runn == True :
     # User selection indent
     
 # Program loop indent
-exit
+
+# Add sucessful exit trap for Travis
+sys.exit(0)
