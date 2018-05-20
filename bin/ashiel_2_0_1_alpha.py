@@ -15,13 +15,12 @@ element from the user.
 bot = ChatBot(
     'ASHIEL 2',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
-
     logic_adapters=[
         'chatterbot.logic.BestMatch'
     ],
     input_adapter='chatterbot.input.TerminalAdapter',
     output_adapter='chatterbot.output.TerminalAdapter'
+    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
 )
 
 chatbot.train("chatterbot.corpus.english")
