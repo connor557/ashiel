@@ -19,7 +19,6 @@ bot = ChatBot(
         'chatterbot.logic.BestMatch'
     ],
     trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
-    chatbot.get_response("Hello, how are you today?")
 )
 
 chatbot.train("chatterbot.corpus.english")
