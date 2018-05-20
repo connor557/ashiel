@@ -9,7 +9,6 @@ except ImportError:
     import tkinter.scrolledtext as ScrolledText
 import time
 
-
 class TkinterGUIExample(tk.Tk):
 
     def __init__(self, *args, **kwargs):
@@ -19,17 +18,18 @@ class TkinterGUIExample(tk.Tk):
         tk.Tk.__init__(self, *args, **kwargs)
 
         self.chatbot = ChatBot(
-            "GUI Bot",
+            "ASHIEL 2",
             storage_adapter="chatterbot.storage.SQLStorageAdapter",
-            logic_adapters=[
-                "chatterbot.logic.BestMatch"
-            ],
             input_adapter="chatterbot.input.VariableInputTypeAdapter",
             output_adapter="chatterbot.output.OutputAdapter",
             database="../database.db"
         )
 
-        self.title("Chatterbot")
+        bot.set_trainer(ChatterBotCorpusTrainer)
+
+        bot.train("chatterbot.corpus.english")
+        
+        self.title("ASHIEL 2")
 
         self.initialize()
 
