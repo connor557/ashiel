@@ -18,6 +18,8 @@ bot = ChatBot(
     logic_adapters=[
         'chatterbot.logic.BestMatch'
     ],
+    input_adapter='chatterbot.input.TerminalAdapter',
+    output_adapter='chatterbot.output.TerminalAdapter'
     trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
 )
 
