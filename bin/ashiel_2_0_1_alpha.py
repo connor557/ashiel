@@ -14,13 +14,13 @@ element from the user.
 # Create a new instance of a ChatBot
 bot = ChatBot(
     'ASHIEL 2',
+    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
         'chatterbot.logic.BestMatch'
     ],
     input_adapter='chatterbot.input.TerminalAdapter',
     output_adapter='chatterbot.output.TerminalAdapter'
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
 )
 
 chatbot.train("chatterbot.corpus.english")
