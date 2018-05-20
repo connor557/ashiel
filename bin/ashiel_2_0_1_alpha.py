@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
 from chatterbot import ChatBot
+import tkinter as tk
+try:
+    import ttk as ttk
+    import ScrolledText
+except ImportError:
+    import tkinter.ttk as ttk
+    import tkinter.scrolledtext as ScrolledText
+import time
 
 """
 This example shows how to create a chat bot that
@@ -22,7 +30,9 @@ bot = ChatBot(
     output_adapter='chatterbot.output.TerminalAdapter'
 )
 
-chatbot.train("chatterbot.corpus.english")
+bot.set_trainer(ChatterBotCorpusTrainer)
+
+bot.train("chatterbot.corpus.english")
 
 CONVERSATION_ID = bot.storage.create_conversation()
 
