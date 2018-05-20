@@ -22,11 +22,14 @@ class TkinterGUIExample(tk.Tk):
             storage_adapter="chatterbot.storage.SQLStorageAdapter",
             input_adapter="chatterbot.input.VariableInputTypeAdapter",
             output_adapter="chatterbot.output.OutputAdapter",
-            database="../database.db"
+            trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
+            database="../database.db",
+            logic_adapters=[
+                "chatterbot.logic.BestMatch"
+            ]
+
         )
-
-        self.chatbot.set_trainer(ChatterBotCorpusTrainer)
-
+        
         self.chatbot.train("chatterbot.corpus.english")
         
         self.title("ASHIEL 2")
