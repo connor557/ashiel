@@ -17,13 +17,12 @@ import time
 bot = ChatBot(
     "ASHIEL 2",
     storage_adapter="chatterbot.storage.SQLStorageAdapter",
+    trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
     input_adapter="chatterbot.input.TerminalAdapter",
     output_adapter="chatterbot.output.TerminalAdapter"
 )
-bot.set_trainer(ChatterBotCorpusTrainer)
 
 bot.train("chatterbot.corpus.english")
-
 
 CONVERSATION_ID = bot.storage.create_conversation()
 
