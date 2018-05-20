@@ -25,9 +25,9 @@ class TkinterGUIExample(tk.Tk):
             database="../database.db"
         )
 
-        self.set_trainer(ChatterBotCorpusTrainer)
+        self.bot.set_trainer(ChatterBotCorpusTrainer)
 
-        self.train("chatterbot.corpus.english")
+        self.bot.train("chatterbot.corpus.english")
         
         self.title("ASHIEL 2")
 
