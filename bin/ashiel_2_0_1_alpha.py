@@ -14,8 +14,9 @@ element from the user.
 # Create a new instance of a ChatBot
 bot = ChatBot(
     'ASHIEL 2',
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
+
     logic_adapters=[
         'chatterbot.logic.BestMatch'
     ],
